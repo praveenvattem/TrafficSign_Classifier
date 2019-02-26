@@ -36,31 +36,36 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/praveenvattem/TrafficSign_Classifier)
 
 ### Data Set Summary & Exploration
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+The pickled data is a dictionary with 4 key/value pairs:
+'features' is a 4D array containing raw pixel data of the traffic sign images, (num examples, width, height, channels).
+'labels' is a 2D array containing the label/class id of the traffic sign. The file signnames.csv contains id -> name mappings for each id.
+'sizes' is a list containing tuples, (width, height) representing the the original width and height the image.
+'coords' is a list containing tuples, (x1, y1, x2, y2) representing coordinates of a bounding box around the sign in the image. THESE COORDINATES ASSUME THE ORIGINAL IMAGE. THE PICKLED DATA CONTAINS RESIZED VERSIONS (32 by 32) OF THESE IMAGES
+Complete the basic data summary below.
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+Number of training examples = 34799
+Number of testing examples = 12630
+Image data shape = (34799, 32, 32, 3)
+Number of classes = 43
 
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+
+
 
 ![alt text][image1]
 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-It is obvious that traffic signs on raw images do not cover images from edge to edge. So, cropping was applied (resulted in image resolution reduction from 32x32 px to 26x26 px). It is also beneficial for CNN training speed because we do not need to process some extra useless pixels. Images also demonstrate lack of sharpen, brightness and contrast, that is why sharpen with unsharp mask, contrast enhance and histogram equalization were applied. All operations are called in the transform_img function.
+Traffic signs on raw images do not cover images from edge to edge. So, cropping was applied (resulted in image resolution reduction from 32x32 px to 26x26 px). It is also beneficial for CNN training speed because we do not need to process some extra useless pixels. Images also demonstrate lack of sharpen, brightness and contrast, that is why sharpen with unsharp mask, contrast enhance and histogram equalization were applied. All operations are called in the transform_img function.
 Colors were saved (no grayscale conversion) because color can be the key to traffic sign classification (for example, sign background and edging colors). Some experiments on the same CNN architecture but with grayscale input images were conducted and shown worse results. It is in contrary to the Pierre Sermanet and Yann LeCun results.
 
 
