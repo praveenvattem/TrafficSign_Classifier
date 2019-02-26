@@ -1,6 +1,6 @@
 # Traffic Sign Classifier
 
-![image 1](mysigns/1.jpg) ![image 2](mysigns/2.jpg) ![image 3](mysigns/3.jpg) ![image 8](mysigns/4.jpg) ![image 10](mysigns/5.jpg) ![image 11](mysigns/6.jpg)
+![image 1](mysigns/1.png) ![image 2](mysigns/2.png) ![image 3](mysigns/3.png) ![image 8](mysigns/4.png) ![image 10](mysigns/5.png) ![image 11](mysigns/6.png)
 
 This repo contains code for images of traffic sign classification from *German Traffic Sign Database* [GTSRB](http://benchmark.ini.rub.de/?section=gtsrb&subsection=news). Originally, it was the task of the second project from Udacity Self-Driving Car Engineer Nanodegree, but now there are some my independent experiments added.
 The train dataset consists of 39209 images with 32x32 px resolution, test dataset - 12630. The datasets were provided by *Udacity*.
