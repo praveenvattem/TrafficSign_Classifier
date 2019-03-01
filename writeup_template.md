@@ -81,7 +81,7 @@ The CNN was trained with theonehot encoder , optimised with  Adam optimizer, bat
 Variables were initialized with using of a truncated normal distribution with mu = 0.0 and sigma = 0.1. Learning rate was finetuned by try and error process.
 Traffic sign classes were coded into one-hot encodings.
 Detailed training log can be found in the train_log_f.csv file (it includes minibatch loss and accuracy). As one can observe, at the end of the training process, accuracy stopped increasing and loss oscillated around relatively small value.
-Training was performed on a GTX 920MX (nvidia) and it takes about half an hour.
+Training was performed on a GTX 920MX (nvidia) and it takes about 16 minutes.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -92,11 +92,10 @@ As it is an image classification problem, convolutional layers were used as it i
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-There are 10 real traffic signs from Moscow streets correspond to presented in the train dataset classes. They have a little bit different to the test dataset colors and arrows style.Background and signs brightness can be challenging. Some traffic signs are dirty or images are light damaged.
+There are 6 real traffic signs from Moscow streets correspond to presented in the train dataset classes. They have a little bit different to the test dataset colors and arrows style.Background and signs brightness can be challenging. Some traffic signs are dirty or images are light damaged.
 There are 2 additional road signs missing in the training dataset ( "No U-turn" and "speed limit (40 km / h)"). They should not be used to assess the accuracy, but included as experiment.
 
-![image 1](mysigns/1.jpg) ![image 2](mysigns/2.jpg) ![image 3](mysigns/3.jpg) ![image 4](mysigns/4.jpg) ![image 5](mysigns/5.jpg) ![image 6](mysigns/6.jpg) ![image 7](mysigns/7.jpg) ![image 8](mysigns/8.jpg) ![image 9](mysigns/9.jpg) ![image 10](mysigns/10.jpg) ![image 11](mysigns/11.jpg) ![image 12](mysigns/12.jpg)
-
+![image 1](mysigns/1.png) ![image 2](mysigns/2.png) ![image 3](mysigns/3.png) ![image 4](mysigns/4.png) ![image 5](mysigns/5.png) ![image 6](mysigns/6.png) 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -111,25 +110,12 @@ Here are the results of the prediction:
 | Slippery Road			| Slippery Road      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 90%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 94%. This compares favorably to the accuracy on the test set of ...
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-We can see that 2 of traffic signs of presented in the training set classes were misclassified ("speed limit (20 km / h)" and "speed limit (60 km / h)"). In both cases net correctly respond that they were a speed limit signs, so only numbers were recognized incorrectly. (One of the possible solution for real world application is to train another NN to classify numbers only). So, accuracy is about 80% on the real world extra images.
-Extra sign "speed limit (40 km / h)" was misclassified (obviously) as a another speed limit sign, so, the CNN can understand traffic sign types quite well.
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+The code for making predictions on my final model is located in the 43th cell of the Ipython notebook.
+the 5 image where compare and the model predicted the exact label and given predicton value above the image. it compared all the 6 images simultaneously and given perfect prdiction . please check the 43 th cell here [project code](https://github.com/praveenvattem/TrafficSign_Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
