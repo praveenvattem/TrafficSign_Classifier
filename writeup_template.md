@@ -95,7 +95,7 @@ As it is an image classification problem, convolutional layers were used as it i
 There are 10 real traffic signs from Moscow streets correspond to presented in the train dataset classes. They have a little bit different to the test dataset colors and arrows style.Background and signs brightness can be challenging. Some traffic signs are dirty or images are light damaged.
 There are 2 additional road signs missing in the training dataset ( "No U-turn" and "speed limit (40 km / h)"). They should not be used to assess the accuracy, but included as experiment.
 
-![image 1](mysigns/1.png) ![image 2](mysigns/2.png) ![image 3](mysigns/3.png) ![image 4](mysigns/4.png) ![image 5](mysigns/5.png) ![image 6](mysigns/6.png) ![image 7](mysigns/7.png) ![image 8](mysigns/8.png) ![image 9](mysigns/9.png) ![image 10](mysigns/10.png) ![image 11](mysigns/11.png) ![image 12](mysigns/12.png)
+![image 1](mysigns/1.jpg) ![image 2](mysigns/2.jpg) ![image 3](mysigns/3.jpg) ![image 4](mysigns/4.jpg) ![image 5](mysigns/5.jpg) ![image 6](mysigns/6.jpg) ![image 7](mysigns/7.jpg) ![image 8](mysigns/8.jpg) ![image 9](mysigns/9.jpg) ![image 10](mysigns/10.jpg) ![image 11](mysigns/11.jpg) ![image 12](mysigns/12.jpg)
 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
